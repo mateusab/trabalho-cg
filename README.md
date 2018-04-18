@@ -1,4 +1,4 @@
-## Trabalho de Computaçõ Gráfica 
+## Trabalho de Computação Gráfica 
 Repositório criado para armazenar as atividades da disciplina de Computação Gráfica.
 
 ### Integrantes
