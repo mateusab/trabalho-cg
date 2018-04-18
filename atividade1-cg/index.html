@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <script src="../js/three.js"></script>
+  <script src="../js/loader/OBJLoader.js"></script>
+  <script src="../js/loader/MTLLoader.js"></script>
+  <script src="../js/Detector.js"></script>
+  <script src="../js/OrbitControls.js"></script>
+  <script src="at1.js"></script>
+  <title>Atividade 1 - CG</title>
+  <style>
+    #info {
+                color: #fff;
+                position: absolute;
+                top: 10px;
+                width: 100%;
+                text-align: center;
+                z-index: 100;
+                display:block;
+    }
+    #div {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+
+<body>
+        <div id="info">
+            Computação Gráfica - Atividade 1
+        </div>
+  <script>
+    if (!Detector.webgl) {
+      Detector.addGetWebGLMessage();
+    }
+
+    init();
+    animate();
+
+  </script>
+</body>
+</html>
