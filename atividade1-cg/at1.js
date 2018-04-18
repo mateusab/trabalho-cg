@@ -15,7 +15,7 @@ var camera, controls, scene, renderer;
       camera.position.z = 500;
 
 
-      /* Scene */
+      /* Criacao do cenario */
       scene = new THREE.Scene(); //Aplicando o scene no objeto
       ambient = new THREE.AmbientLight(0xFFFFFFF, 1.0); //Iluminando o objeto
       scene.add(ambient);
@@ -28,29 +28,30 @@ var camera, controls, scene, renderer;
       materials.preload();
         
         /* Careegando o Objeto */
-        var objLoader = new THREE.OBJLoader();
-        objLoader.setMaterials(materials);
-        objLoader.load('images/Football.obj', function(object) {
+      var objLoader = new THREE.OBJLoader();
+       objLoader.setMaterials(materials);
+      objLoader.load('images/Football.obj', function(object){
+        //Seta o posicionamento do objeto
         object.position.set(0, 0, 0);
-        object.receiveShadow = true;
+        //Uso do scale para aumentar o objeto em 2.5 nas tres coordenadas
         object.scale.set(2.5, 2.5, 2.5);
         ball.add(object);
         });
       });
-
+      //Adiciona a bola no cenario
       scene.add(ball);
 
-      /* Renderer */
+      /* Renderizacao */
       renderer = new THREE.WebGLRenderer();
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setClearColor(new THREE.Color("green"));
       container.appendChild(renderer.domElement);
 
-      /* Controls */
+      /* Controles */
       controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-      /* Eventos que podem occorer */
+      /* Tratamento de redimensionamento de janela */
       window.addEventListener('resize', onWindowResize, false);
     }
 
@@ -67,6 +68,7 @@ var camera, controls, scene, renderer;
     }
   
     function render() {
+      //Comandos para fazer a rotacao da bola
       ball.rotation.x += 0.010;
       ball.rotation.y += 0.05;
       ball.rotation.z += 0.02
