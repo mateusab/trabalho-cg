@@ -6,13 +6,38 @@ var camera, controls, scene, renderer;
       container = document.createElement('div');
       document.body.appendChild(container);
 
-      /* Camera */
-      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+      var matrixGoal = new THREE.Matrix4();
+      var matrixBall = new THREE.Matrix4();
 
-      //Colocando a posição da câmera 3D
-      camera.position.x = 250;
-      camera.position.y = 200;
-      camera.position.z = 500;
+      //Rotacao da bola no eixo y - TESTAR, FAZER A BOLA FICAR NO CHAO
+      matrixBall.set(
+      	1, 0, 0, 0,
+      	0, 1, 0, 0,
+      	0, 0, 1, 0,
+      	0, 0, 0, 1
+      	);
+
+      //Escala nas coordenadas x, y, z. Todas com 6.5
+      matrixGoal.set(
+      	6.5, 0, 0, 0,
+      	0, 6.5, 0, 0,
+      	0, 0, 6.5, 0,
+      	0, 0, 0, 1
+      	);
+
+      /* Visualizacao */
+      var cameraMatrix = new THREE.Matrix4();
+      //Mudar as coordenadas da camera, onde a posicao x = 300, y = 100, z = 600
+      cameraMatrix.set(
+        1, 0, 0, 300,
+        0, 1, 0, 100,
+        0, 0, 1, 600,
+        0, 0, 0, 1
+      );
+
+      /* Camera */
+      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 2000);
+      camera.applyMatrix(cameraMatrix);
 
 
       /* Criacao do cenario */
@@ -28,13 +53,15 @@ var camera, controls, scene, renderer;
       materials.preload();
         
         /* Careegando o Objeto */
-      var objLoader = new THREE.OBJLoader();
-       objLoader.setMaterials(materials);
-      objLoader.load('images/Football.obj', function(object){
+      	var objLoader = new THREE.OBJLoader();
+       	objLoader.setMaterials(materials);
+      	objLoader.load('images/Football.obj', function(object){
         //Seta o posicionamento do objeto
-        object.position.set(0, -200, 0);
+        object.position.set(0, 0, 0);
         //Uso do scale para aumentar o objeto em 2.5 nas tres coordenadas
         object.scale.set(2.5, 2.5, 2.5);
+        object.applyMatrix(matrixBall);
+        object.updateMatrix();
         ball.add(object);
         });
       });
@@ -48,17 +75,17 @@ var camera, controls, scene, renderer;
           
           /* Careegando o Objeto */
         var objLoader = new THREE.OBJLoader();
-         objLoader.setMaterials(materials);
-        objLoader.load('images/goal.obj', function(object){
+          objLoader.setMaterials(materials);
+          objLoader.load('images/goal.obj', function(object){
           //Seta o posicionamento do objeto
           object.position.set(0, 0, 0);
-          //Uso do scale para aumentar o objeto em 2.5 nas tres coordenadas
-          object.scale.set(6.5, 6.5, 6.5);
+          object.applyMatrix(matrixGoal);
+          object.updateMatrix();
           goal.add(object);
           });
         });
         //Adiciona a bola no cenario
-        goal.rotation.x += 50.2;
+        //goal.rotation.x += 50.2;
         goal.rotation.y += 500;
         //goal.rotation.x += 50;
         scene.add(goal);
