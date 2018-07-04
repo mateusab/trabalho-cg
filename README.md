@@ -16,3 +16,8 @@ Repositório criado para armazenar as atividades da disciplina de Computação G
 - Transformação do modelo (uma diferente para cada modelo);
 - De visualização (uma para toda a a cena).
 
+#### Atividade 3
+- Visualização de pelo menos quatro objetos diferentes;
+- Câmera em pelo menos duas posições diferentes (pode ser alternada por uma tecla ou mouse);
+- Implementação de uma curva na cena: movimento ou objeto;
+- Shader próprio incluindo o modelo de iluminação e tonalização phong.
