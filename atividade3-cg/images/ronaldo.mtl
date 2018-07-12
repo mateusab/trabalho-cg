@@ -1,0 +1,222 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 29.09.2014 19:22:13
+
+newmtl _Ronaldo_pes_mat_face_hair
+	Ns 96.0784
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.0500 0.0500 0.0500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\Bale\Adidas Torfabrik 2013 2014 winter edition\Cristiano Ronaldo\hair_parts_col.dds
+	map_Kd C:\Users\PhysicsEO\Desktop\Bale\Adidas Torfabrik 2013 2014 winter edition\Cristiano Ronaldo\hair_parts_col.dds
+
+newmtl _Ronaldo_pes_mat_face_hair_face_dds
+	Ns 96.0784
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.0500 0.0500 0.0500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\Bale\Adidas Torfabrik 2013 2014 winter edition\Cristiano Ronaldo\face.dds
+	map_Kd C:\Users\PhysicsEO\Desktop\Bale\Adidas Torfabrik 2013 2014 winter edition\Cristiano Ronaldo\face.dds
+
+newmtl _Ronaldo_pes_mat_face_hair_hair_col_dds
+	Ns 96.0784
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6400 0.6400 0.6400
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\Bale\Adidas Torfabrik 2013 2014 winter edition\Cristiano Ronaldo\hair_col.dds
+	map_Kd C:\Users\PhysicsEO\Desktop\Bale\Adidas Torfabrik 2013 2014 winter edition\Cristiano Ronaldo\hair_col.dds
+
+newmtl Material__26
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\RFaces\data\Cristiano Ronaldo eye.png
+	map_Kd C:\Users\PhysicsEO\Desktop\RFaces\data\Cristiano Ronaldo eye.png
+
+newmtl 16___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\futball kits\shorts\rm2012shorts.png
+	map_Kd C:\Users\PhysicsEO\Desktop\futball kits\shorts\rm2012shorts.png
+
+newmtl Material__1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.1800 0.1800 0.1800
+	Ke 0.0000 0.0000 0.0000
+
+newmtl _frame_16material_93
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.7961 0.5686 0.3490
+	Kd 0.7961 0.5686 0.3490
+	Ks 0.0810 0.0810 0.0810
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Material__88
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\Boots\11whiteyellowblack256.png
+	map_Kd C:\Users\PhysicsEO\Desktop\Boots\11whiteyellowblack256.png
+
+newmtl Material__41
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\futball kits\homechampiomsleagueupd - Copy (2).png
+	map_Kd C:\Users\PhysicsEO\Desktop\futball kits\homechampiomsleagueupd - Copy (2).png
+
+newmtl Material__38
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\Boots\29p2sdj.png
+	map_Kd C:\Users\PhysicsEO\Desktop\Boots\29p2sdj.png
+
+newmtl Material__37
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\Boots\29p2sdj.png
+	map_Kd C:\Users\PhysicsEO\Desktop\Boots\29p2sdj.png
+
+newmtl Material__452
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\futball kits\homechampiomsleagueupd - Copy (3).png
+	map_Kd C:\Users\PhysicsEO\Desktop\futball kits\homechampiomsleagueupd - Copy (3).png
+
+newmtl Material__54
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Downloads\t-pose_4 (2).fbm\USA_Texture2.jpg
+	map_Kd C:\Users\PhysicsEO\Downloads\t-pose_4 (2).fbm\USA_Texture2.jpg
+
+newmtl Material__25
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Downloads\t-pose_4 (2).fbm\USA_Texture2.jpg
+	map_Kd C:\Users\PhysicsEO\Downloads\t-pose_4 (2).fbm\USA_Texture2.jpg
+
+newmtl Material__42
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Downloads\t-pose_4 (2).fbm\USA_Texture2.jpg
+	map_Kd C:\Users\PhysicsEO\Downloads\t-pose_4 (2).fbm\USA_Texture2.jpg
+
+newmtl Material__503
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\PhysicsEO\Desktop\futball kits\homechampiomsleagueupd - Copy (3).png
+	map_Kd C:\Users\PhysicsEO\Desktop\futball kits\homechampiomsleagueupd - Copy (3).png
