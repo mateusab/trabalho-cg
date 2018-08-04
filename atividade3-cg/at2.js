@@ -1,5 +1,6 @@
 var container;
 var camera, controls, scene, renderer;
+var count = 0;  
 
 function init() {
 
@@ -8,6 +9,7 @@ function init() {
 
   var matrixGoal = new THREE.Matrix4();
   var matrixBall = new THREE.Matrix4();
+  var bezierCurve;
 
   //Rotacao da bola no eixo y - TESTAR, FAZER A BOLA FICAR NO CHAO
   matrixBall.set(
@@ -125,12 +127,30 @@ function init() {
   document.addEventListener("keydown", onDocumentKeyDown, false);
   function onDocumentKeyDown(event) {
     var keyCode = event.which;
+    var bezierCurve = new THREE.CubicBezierCurve3(
+          new THREE.Vector3(250,-20,450),   //Starting point
+          new THREE.Vector3(-200, 10, 350),    //First control point
+          new THREE.Vector3(100, 0, 250),    //Second control point
+          new THREE.Vector3(0, 0, 0)      //Ending point
+        );
+
+    var points = bezierCurve.getPoints(100);
     //pressionando a barra de espaço
     if (keyCode == 32){
-      ronaldo.rotation.y += 500;
+      if (count <= 100){
+        atualiza(points[count].x,points[count].y,points[count].z)
+        count++;
+      }else{
+        count = 0;
+      }
     }
-    render();
-  };
+  render();
+  }
+
+  function atualiza(x, y, z){
+      ball.position.set(x,y,z); 
+      render();      
+  }
 
   function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
