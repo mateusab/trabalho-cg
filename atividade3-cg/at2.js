@@ -50,6 +50,17 @@ function init() {
   ambient = new THREE.AmbientLight(0xFFFFFFF, 1.0); //Iluminando o objeto
   scene.add(ambient);
 
+  /* Criando um chão para a nossa cena */
+  textura = THREE.ImageUtils.loadTexture('images/grama.png');
+  var planeGeometry = new THREE.PlaneGeometry(1000,1000,1000);
+  var planeMaterial = new THREE.MeshBasicMaterial({map: textura});
+  var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+  plane.position.set(0,-50,100);
+  plane.rotation.x = -Math.PI/2;
+  plane.position.y = -100;
+  plane.rotation.z += 60;
+  scene.add(plane);
+
   /* Colocando o caminho do objeto */
   ball = new THREE.Object3D();
   var mtlLoader = new THREE.MTLLoader();
@@ -63,14 +74,14 @@ function init() {
       object.position.set(0, 0, 0);
       ball.position.set(250,-20,450);
       //Uso do scale para aumentar o objeto em 2.5 nas tres coordenadas
-      ball.scale.set(0.75, 0.75, 0.75);
+      ball.scale.set(0.25, 0.25, 0.25);
       object.applyMatrix(matrixBall);
       object.updateMatrix();
       ball.add(object);
       });
     });
     //Adiciona a bola no cenario
-    scene.add(ball);
+  scene.add(ball);
 
   goal = new THREE.Object3D();
   mtlLoader.load('images/goal.mtl', function(materials){
@@ -83,13 +94,21 @@ function init() {
       object.position.set(0, 0, 0);
       object.applyMatrix(matrixGoal);
       object.updateMatrix();
-      object.scale.set(2,2,2);
+      object.scale.set(3,3,3);
       goal.add(object);
     });
   });
   //Adiciona o gol no cenario
   goal.rotation.y += 500;
   scene.add(goal);
+
+  /* Cristiano Ronaldo */
+  //var crTexture = new THREE.ImageUtils.loadTexture('images/ronaldo.png');
+  //var oMaterial = new THREE.MeshLambertMaterial( { map: crTexture } );
+  
+  //var light = new THREE.PointLight(0xFFFFFFF, 100, 100);
+  //light.position.set(4,4,6);
+  //scene.add(light);
 
   ronaldo = new THREE.Object3D();
   mtlLoader.load('images/ronaldo.mtl', function(materials){
@@ -98,16 +117,36 @@ function init() {
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
     objLoader.load('images/ronaldo.obj', function(object){
+
       //Seta o posicionamento do objeto
       object.position.set(-50, 0, 0);
-      object.scale.set(1, 1, 1);
-      ronaldo.position.set(250,0,500);
+      object.scale.set(0.5, 0.5, 0.5);
+      ronaldo.position.set(250,0,500)
+      //O comando abaixo deixa o CR7 de Costa
+      ronaldo.rotation.y += 500;
       ronaldo.add(object);
     });
   });
+  scene.add(ronaldo);
+
+  /* The Rock */
+  therock = new THREE.Object3D();
+  mtlLoader.load('images/Rock.mtl', function(materials){
+    materials.preload();      
+    /* Carregando o Objeto */
+    var objLoader = new THREE.OBJLoader();
+    objLoader.setMaterials(materials);
+    objLoader.load('images/Rock.obj', function(object){
+      //Seta o posicionamento do objeto
+      object.position.set(0, -30, -200);
+      object.scale.set(0.5, 0.5, 0.5);
+      therock.position.set(0,0,0);
       //O comando abaixo deixa o CR7 de Costa
-      ronaldo.rotation.y += 500;
-      scene.add(ronaldo);
+      therock.rotation.y += 500;
+      therock.add(object);
+    });
+  });
+  scene.add(therock);
 
   /* Renderizacao */
   renderer = new THREE.WebGLRenderer();
@@ -143,6 +182,13 @@ function init() {
       }else{
         count = 0;
       }
+    }
+
+    if (keyCode == 37){
+      therock.position.x -= 5;
+    }
+    if (keyCode == 39){
+      therock.position.x += 5;
     }
   render();
   }
