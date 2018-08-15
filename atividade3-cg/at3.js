@@ -61,9 +61,15 @@ function init() {
   plane.rotation.z += 60;
   scene.add(plane);
 
+  /*Criando um textura para o background*/
+  var back = new THREE.TextureLoader().load("images/stadium.jpg");
+  scene.background = back;
+
   /* Colocando o caminho do objeto */
   ball = new THREE.Object3D();
   var mtlLoader = new THREE.MTLLoader();
+  var textureBall = new THREE.TextureLoader().load("images/football_1.jpg");
+  var texturaPhong = new THREE.MeshPhongMaterial({map: textureBall});
   mtlLoader.load('images/Football.mtl', function(materials){
     materials.preload();  
     /* Carregando o Objeto */
@@ -77,6 +83,13 @@ function init() {
       ball.scale.set(0.25, 0.25, 0.25);
       object.applyMatrix(matrixBall);
       object.updateMatrix();
+        object.traverse(function(child)
+        {
+          if(child instanceof THREE.Mesh)
+          {
+            child.material = texturaPhong;
+          }
+        });
       ball.add(object);
       });
     });
