@@ -1,4 +1,4 @@
-var container;
+﻿var container;
 var camera, controls, scene, renderer;
 var count = 0;  
 
@@ -123,10 +123,10 @@ function init() {
   //light.position.set(4,4,6);
   //scene.add(light);
 
+  
   ronaldo = new THREE.Object3D();
   mtlLoader.load('images/ronaldo.mtl', function(materials){
     materials.preload();      
-    /* Carregando o Objeto */
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
     objLoader.load('images/ronaldo.obj', function(object){
@@ -140,21 +140,21 @@ function init() {
     });
   });
   scene.add(ronaldo);
-
+  
   /* The Rock */
   therock = new THREE.Object3D();
-  mtlLoader.load('images/Rock.mtl', function(materials){
+  mtlLoader.load('images/ronaldo_goal.mtl', function(materials){
     materials.preload();      
     /* Carregando o Objeto */
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
-    objLoader.load('images/Rock.obj', function(object){
+    objLoader.load('images/ronaldo.obj', function(object){
       //Seta o posicionamento do objeto
-      object.position.set(0, -30, -200);
+      object.position.set(70, -35, -200);
       object.scale.set(0.5, 0.5, 0.5);
-      therock.position.set(0,0,0);
+      therock.position.set(50,0,370);
       //O comando abaixo deixa o CR7 de Costa
-      therock.rotation.y += 500;
+      therock.rotation.y += -50;
       therock.add(object);
     });
   });
